@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.a_citra.belajar.sign_in">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/judul" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/judul"
+        android:id="@+id/judul"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:layout_above="@+id/textNIS"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/nomor_induk_siswa"
+        android:ems="10"
+        android:id="@+id/textNIS"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/kata_sandi"
+        android:ems="10"
+        android:id="@+id/textKataSandi"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textNIS"
+        android:layout_alignLeft="@+id/textNIS"
+        android:layout_alignStart="@+id/textNIS" />
+
+    <Button
+        android:text="@string/masuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonMasuk"
+        android:background="@color/colorButton"
+        android:onClick="onMasukClick"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textKataSandi"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

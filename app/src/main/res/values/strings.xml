@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Belajar</string>
+    <string name="keluar">Keluar</string>
+    <string name="masuk">Masuk</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="nomor_induk_siswa">Nomor Induk Siswa</string>
+</resources>
