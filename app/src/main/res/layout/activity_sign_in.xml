@@ -4,7 +4,7 @@
     android:id="@+id/activity_sign_in"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/signin"
     tools:context="com.example.a_citra.belajar.sign_in">
 
     <ImageView

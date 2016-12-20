@@ -43,9 +43,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onKeluarClick(View view) {
-
-    }
-
-
 }
