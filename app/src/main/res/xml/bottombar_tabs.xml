@@ -1,17 +1,17 @@
 <tabs>
     <tab
         id="@+id/tab_buat_janji"
-        icon="@drawable/ic_home_white_24dp"
+        icon="@drawable/ic_people_black_24dp"
         title="Buat Janji"
         barColorWhenSelected="@color/colorBuatJanji"/>
     <tab
         id="@+id/tab_lapor"
-        icon="@drawable/ic_person_white_24dp"
+        icon="@drawable/ic_assignment_black_24dp"
         title="Lapor"
         barColorWhenSelected="@color/colorLapor"/>
     <tab
         id="@+id/tab_profil"
-        icon="@drawable/ic_settings_white_24dp"
+        icon="@drawable/ic_face_black_24dp"
         title="Profil"
         barColorWhenSelected="@color/colorProfil"
         />

@@ -7,7 +7,7 @@
     <color name="colorText">#000000</color>
     <color name="colorButtomBar">#66546D</color>
     <color name="colorBackground">#FFFFFF</color>
-    <color name="colorBuatJanji">#9C51B0</color>
-    <color name="colorLapor">#9C27B0</color>
-    <color name="colorProfil">#7B1FA2</color>
+    <color name="colorBuatJanji">#BC9FC9</color>
+    <color name="colorLapor">#BC9FC9</color>
+    <color name="colorProfil">#BC9FC9</color>
 </resources>
