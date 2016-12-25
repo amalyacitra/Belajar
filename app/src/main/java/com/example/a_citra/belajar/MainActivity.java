@@ -2,6 +2,9 @@ package com.example.a_citra.belajar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -13,6 +16,8 @@ import com.roughike.bottombar.OnTabSelectListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    ViewPager viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Citra", "sampe sini");
         Toolbar toolbar = (Toolbar) findViewById(R.id.appbar);
         toolbar.setTitle("Main Menu");
+
+        viewPager = (ViewPager) findViewById(R.id.pager);
+
+        Fragment datePickFragment;
 
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
