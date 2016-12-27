@@ -22,7 +22,7 @@
             <activity android:name=".tab_fragment_buat_janji" />
             <activity android:name=".tab_fragment_lapor" />
             <activity android:name=".tab_fragment_profil" />
-            <activity android:name=".DatePickFragment"></activity>
+
         </activity>
 
     </application>
