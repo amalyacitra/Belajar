@@ -6,5 +6,6 @@
     <string name="nomor_induk_siswa">Nomor Induk Siswa</string>
     <string name="selected_date">selected_date</string>
     <string name="pick_date">pick_date</string>
+    <string name="keluarr">Keluar</string>
 
 </resources>

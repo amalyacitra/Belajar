@@ -1,28 +1,30 @@
 package com.example.a_citra.belajar;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.app.DialogFragment;
-
 import android.widget.Button;
 import android.widget.TextView;
-import java.util.Calendar;
 
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
+import java.util.Calendar;
 
-public class tab_fragment_buat_janji extends Fragment implements DatePickerDialog.OnDateSetListener  {
+
+public class tab_fragment_buat_janji extends Fragment implements DatePickerDialog.OnDateSetListener {
+
+
+    //@Override
+    //public View onCreateView(LayoutInflater inflater, ViewGroup container,
+      //                       Bundle savedInstanceState) {
+        //View rootView = inflater.inflate(R.layout.activity_tab_fragment_buat_janji, container, false);
+        //return rootView;
+
+    //}
 
     private TextView dateTextView;
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-    }
 
     public tab_fragment_buat_janji() {
 
@@ -31,34 +33,33 @@ public class tab_fragment_buat_janji extends Fragment implements DatePickerDialo
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_tab_fragment_buat_janji, container, false);
+        View view = inflater.inflate(R.layout.activity_tab_fragment_buat_janji, container, false);
 
-
-        dateTextView = (TextView) rootView.findViewById(R.id.date_textview);
-        Button dateButton = (Button) rootView.findViewById(R.id.date_button);
+        dateTextView = (TextView) view.findViewById(R.id.date_textview);
+        Button dateButton = (Button) view.findViewById(R.id.date_button);
 
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Calendar now = Calendar.getInstance();
                 DatePickerDialog dpd = DatePickerDialog.newInstance(
-
-                        tab_fragment_buat_janji.this,
+                        (DatePickerDialog.OnDateSetListener) getActivity(),
                         now.get(Calendar.YEAR),
                         now.get(Calendar.MONTH),
                         now.get(Calendar.DAY_OF_MONTH)
+
                 );
-                //dpd.show(getActivity().getSupportFragmentManager(), "Datepickerdialog");
+                dpd.show(getFragmentManager(), "Datepickerdialog");
             }
         });
 
-        return rootView;
+        return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        DatePickerDialog dpd = (DatePickerDialog) getActivity().getSupportFragmentManager();
+        DatePickerDialog dpd = (DatePickerDialog) getFragmentManager().findFragmentByTag("Datepickerdialog");
         if(dpd != null) dpd.setOnDateSetListener(this);
     }
 

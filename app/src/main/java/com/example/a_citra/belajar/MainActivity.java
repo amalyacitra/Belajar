@@ -1,4 +1,5 @@
 package com.example.a_citra.belajar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.support.v4.app.Fragment;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
@@ -18,23 +21,32 @@ public class MainActivity extends AppCompatActivity {
     PickerAdapter adapter;
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         Log.d("Citra", "sampe sini");
         Toolbar toolbar = (Toolbar) findViewById(R.id.appbar);
-        toolbar.setTitle("Main Menu");
+        toolbar.setTitle("Belajar");
+
 
         viewPager = (ViewPager) findViewById(R.id.pager);
-
-        Fragment datePickFragment;
+        viewPager.setAdapter(adapter);
+        adapter = new PickerAdapter(getSupportFragmentManager());
 
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                 if(tabId==R.id.tab_buat_janji){
                     Fragment fBuatJanji = new tab_fragment_buat_janji();
+
                     getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fBuatJanji).commit();
 
                 }
@@ -49,6 +61,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+
+    public void pilihKeluar(MenuItem item) {
+        //Toast.makeText(this, "Hello World", Toast.LENGTH_LONG).show();
+        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent intent = new Intent(getApplicationContext(),sign_in.class);
+                startActivity(intent);
+                return true;
+            }
+        });
     }
 
     class PickerAdapter extends FragmentPagerAdapter {

@@ -6,6 +6,7 @@
         android:id="@+id/keluar"
         app:showAsAction="ifRoom|withText"
         android:title="@string/keluarr"
+        android:onClick="pilihKeluar"
         >
     </item>
 
