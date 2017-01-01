@@ -79,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class PickerAdapter extends FragmentPagerAdapter {
-        //Fragment timePickerFragment;
+        Fragment timePickerFragmentBuatJanji;
         Fragment datePickerFragmentBuatJanji;
         Fragment datePickerFragmentLapor;
 
         public PickerAdapter(FragmentManager fm) {
             super(fm);
-            //timePickerFragment = new TimePickerFragment();
+            timePickerFragmentBuatJanji = new tab_fragment_buat_janji();
             datePickerFragmentBuatJanji = new tab_fragment_buat_janji();
             datePickerFragmentLapor = new tab_fragment_lapor();
         }

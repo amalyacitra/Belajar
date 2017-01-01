@@ -6,6 +6,12 @@
     <string name="nomor_induk_siswa">Nomor Induk Siswa</string>
     <string name="selected_date">Hari dan Tanggal</string>
     <string name="pilih_tanggal_dan_hari">Pilih tanggal dan hari</string>
-    <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="pilih_tanggal">Pilih</string>
+    <string name="pilih_jam">Pilih jam</string>
+    <string name="selected_time">Jam</string>
+    <string name="pick_time">Pilih</string>
+    <string name="mode_24_hours">Mode 24 Jam</string>
+    <string name="perihal">Perihal</string>
+    <string name="kirim">Kirim</string>
 
 </resources>

@@ -8,37 +8,112 @@
 
     tools:context="com.example.a_citra.belajar.tab_fragment_buat_janji">
 
-    <TextView
-        android:id="@+id/pilihtanggaldanhari"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pilih_tanggal_dan_hari"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_below="@id/appbar"/>
-
-
-    <Button
-        android:id="@+id/date_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pilih_tanggal"
-        android:layout_below="@+id/pilihtanggaldanhari"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp" />
 
     <TextView
         android:id="@+id/date_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/selected_date"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:layout_alignBaseline="@+id/date_button"
         android:layout_alignBottom="@+id/date_button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignLeft="@+id/pilihtanggaldanhari"
+        android:layout_alignStart="@+id/pilihtanggaldanhari" />
+
+    <TextView
+        android:id="@+id/time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selected_time"
+        android:textSize="15sp"
+        android:layout_marginTop="91dp"
+        android:layout_below="@+id/date_button"
+        android:layout_alignLeft="@+id/pilihjam"
+        android:layout_alignStart="@+id/pilihjam" />
+
+
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/pilih_tanggal"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:background="@color/colorButton"
+        android:layout_below="@+id/pilihtanggaldanhari"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp" />
+
+
+    <CheckBox
+        android:id="@+id/mode_24_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mode_24_hours"
+        android:layout_alignBaseline="@+id/pilihjam"
+        android:layout_alignBottom="@+id/pilihjam"
+        android:layout_toRightOf="@+id/pilihjam"
+        android:layout_toEndOf="@+id/pilihjam"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+    <Button
+        android:text="@string/kirim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:id="@+id/buttonkirim"
+        android:background="@color/colorButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/Perihal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="18"
+        android:hint="@string/perihal"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/time_button"
+        android:layout_alignRight="@+id/time_button"
+        android:layout_alignEnd="@+id/time_button" />
+
+    <TextView
+        android:id="@+id/pilihtanggaldanhari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pilih_tanggal_dan_hari"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/Perihal"
+        android:layout_alignStart="@+id/Perihal" />
+
+    <TextView
+        android:id="@+id/pilihjam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pilih_jam"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/time_button"
+        android:layout_alignLeft="@+id/date_textview"
+        android:layout_alignStart="@+id/date_textview" />
+
+    <Button
+        android:id="@+id/time_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/pick_time"
+        android:background="@color/colorButton"
+        android:layout_alignBaseline="@+id/time_textview"
+        android:layout_alignBottom="@+id/time_textview"
+        android:layout_alignLeft="@+id/date_button"
+        android:layout_alignStart="@+id/date_button" />
 
 
 </RelativeLayout>
