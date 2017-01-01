@@ -9,35 +9,36 @@
     tools:context="com.example.a_citra.belajar.tab_fragment_buat_janji">
 
     <TextView
+        android:id="@+id/pilihtanggaldanhari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tab Fragment buat janji"
-        android:textSize="12sp"
-        android:id="@+id/textView" />
+        android:text="@string/pilih_tanggal_dan_hari"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/appbar"/>
 
 
-    <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:text="@string/pilih_tanggal"
+        android:layout_below="@+id/pilihtanggaldanhari"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
 
-
-        <TextView
-            android:id="@+id/date_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/selected_date"/>
-
-        <Button
-            android:id="@+id/date_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pick_date"/>
-
-
-
-    </LinearLayout>
-
+    <TextView
+        android:id="@+id/date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selected_date"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/date_button"
+        android:layout_alignBottom="@+id/date_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

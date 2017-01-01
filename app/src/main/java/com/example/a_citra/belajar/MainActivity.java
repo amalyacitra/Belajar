@@ -2,13 +2,13 @@ package com.example.a_citra.belajar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.support.v4.app.Fragment;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -79,33 +79,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class PickerAdapter extends FragmentPagerAdapter {
-        private static final int NUM_PAGES = 2;
         //Fragment timePickerFragment;
-        Fragment datePickerFragment;
+        Fragment datePickerFragmentBuatJanji;
+        Fragment datePickerFragmentLapor;
 
         public PickerAdapter(FragmentManager fm) {
             super(fm);
             //timePickerFragment = new TimePickerFragment();
-            datePickerFragment = new tab_fragment_buat_janji();
-        }
-
-        @Override
-        public int getCount() {
-            return NUM_PAGES;
+            datePickerFragmentBuatJanji = new tab_fragment_buat_janji();
+            datePickerFragmentLapor = new tab_fragment_lapor();
         }
 
         @Override
         public Fragment getItem(int position) {
-            switch(position) {
-                case 0:
-                    //return timePickerFragment;
-                case 1:
-                default:
-                    return datePickerFragment;
-            }
+            return null;
         }
 
 
+        @Override
+        public int getCount() {
+            return 0;
+        }
     }
 
 }

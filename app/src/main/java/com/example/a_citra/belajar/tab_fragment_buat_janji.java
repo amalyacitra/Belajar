@@ -43,13 +43,13 @@ public class tab_fragment_buat_janji extends Fragment implements DatePickerDialo
             public void onClick(View v) {
                 Calendar now = Calendar.getInstance();
                 DatePickerDialog dpd = DatePickerDialog.newInstance(
-                        (DatePickerDialog.OnDateSetListener) getActivity(),
+                        tab_fragment_buat_janji.this,
                         now.get(Calendar.YEAR),
                         now.get(Calendar.MONTH),
                         now.get(Calendar.DAY_OF_MONTH)
 
                 );
-                dpd.show(getFragmentManager(), "Datepickerdialog");
+                dpd.show(getActivity().getFragmentManager(), "Datepickerdialog");
             }
         });
 
@@ -59,13 +59,13 @@ public class tab_fragment_buat_janji extends Fragment implements DatePickerDialo
     @Override
     public void onResume() {
         super.onResume();
-        DatePickerDialog dpd = (DatePickerDialog) getFragmentManager().findFragmentByTag("Datepickerdialog");
+        DatePickerDialog dpd = (DatePickerDialog) getActivity().getFragmentManager().findFragmentByTag("Datepickerdialog");
         if(dpd != null) dpd.setOnDateSetListener(this);
     }
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        String date = "You picked the following date: "+dayOfMonth+"/"+(++monthOfYear)+"/"+year;
+        String date = dayOfMonth+"/"+(++monthOfYear)+"/"+year;
         dateTextView.setText(date);
     }
 

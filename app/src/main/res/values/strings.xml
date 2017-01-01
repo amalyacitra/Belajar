@@ -4,8 +4,8 @@
     <string name="masuk">Masuk</string>
     <string name="kata_sandi">Kata Sandi</string>
     <string name="nomor_induk_siswa">Nomor Induk Siswa</string>
-    <string name="selected_date">selected_date</string>
-    <string name="pick_date">pick_date</string>
-    <string name="keluarr">Keluar</string>
+    <string name="selected_date">Hari dan Tanggal</string>
+    <string name="pilih_tanggal_dan_hari">Pilih tanggal dan hari</string>
+    <string name="pilih_tanggal">Pilih Tanggal</string>
 
 </resources>
