@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
-        Log.d("Citra", "sampe sini");
         Toolbar toolbar = (Toolbar) findViewById(R.id.appbar);
         toolbar.setTitle("Belajar");
 
@@ -66,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void pilihKeluar(MenuItem item) {
-        //Toast.makeText(this, "Hello World", Toast.LENGTH_LONG).show();
         item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
 
             @Override

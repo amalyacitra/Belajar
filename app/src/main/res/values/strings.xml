@@ -13,5 +13,8 @@
     <string name="mode_24_hours">Mode 24 Jam</string>
     <string name="perihal">Perihal</string>
     <string name="kirim">Kirim</string>
+    <string name="pilih_gambar">Pilih Gambar</string>
+    <string name="nama_gambar">Nama Gambar</string>
+    <string name="pilih_upload_gambar">Pilih</string>
 
 </resources>

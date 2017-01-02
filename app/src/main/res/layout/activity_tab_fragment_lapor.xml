@@ -8,9 +8,99 @@
     tools:context="com.example.a_citra.belajar.tab_fragment_lapor">
 
     <TextView
+        android:id="@+id/pilihtanggaldanhari"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tab Fragment lapor"
-        android:textSize="16sp"/>
+        android:text="@string/pilih_tanggal_dan_hari"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/Perihal"
+        android:layout_alignStart="@+id/Perihal" />
+
+    <TextView
+        android:id="@+id/date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selected_date"
+        android:textSize="15sp"
+        android:layout_alignBaseline="@+id/date_button"
+        android:layout_alignBottom="@+id/date_button"
+        android:layout_alignLeft="@+id/pilihtanggaldanhari"
+        android:layout_alignStart="@+id/pilihtanggaldanhari" />
+
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/pilih_tanggal"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:background="@color/colorButton"
+        android:layout_below="@+id/pilihtanggaldanhari"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp" />
+
+    <Button
+        android:id="@+id/buttonChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/pilih_upload_gambar"
+        android:layout_alignTop="@+id/editTextName"
+        android:layout_alignLeft="@+id/date_button"
+        android:layout_alignStart="@+id/date_button"
+        android:background="@color/colorButton"/>
+
+    <EditText
+        android:id="@+id/Perihal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="18"
+        android:hint="@string/perihal"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/buttonChoose"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/pilihgambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pilih_gambar"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/buttonChoose"
+        android:layout_alignLeft="@+id/date_textview"
+        android:layout_alignStart="@+id/date_textview" />
+
+    <TextView
+        android:id="@+id/editTextName"
+        android:text="@string/nama_gambar"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_below="@+id/date_button"
+        android:layout_alignLeft="@+id/pilihgambar"
+        android:layout_alignStart="@+id/pilihgambar" />
+
+    <Button
+        android:text="@string/kirim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:id="@+id/buttonkirim"
+        android:background="@color/colorButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
