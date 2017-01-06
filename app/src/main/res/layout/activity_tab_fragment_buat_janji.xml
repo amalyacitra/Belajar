@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_tab_fragment_buat_janji"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -81,18 +80,6 @@
         android:layout_alignEnd="@+id/time_button" />
 
     <TextView
-        android:id="@+id/pilihtanggaldanhari"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pilih_tanggal_dan_hari"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:layout_marginTop="22dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/Perihal"
-        android:layout_alignStart="@+id/Perihal" />
-
-    <TextView
         android:id="@+id/pilihjam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -114,6 +101,40 @@
         android:layout_alignBottom="@+id/time_textview"
         android:layout_alignLeft="@+id/date_button"
         android:layout_alignStart="@+id/date_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/judul_nomor_hp_BK"
+        android:text="@string/nomor_hp_bk"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/pilihtanggaldanhari"
+        android:layout_alignStart="@+id/pilihtanggaldanhari"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:id="@+id/pilihtanggaldanhari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pilih_tanggal_dan_hari"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/isi_nomor_hp_BK"
+        android:layout_alignLeft="@+id/Perihal"
+        android:layout_alignStart="@+id/Perihal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/isi_nomor_hp_BK"
+        android:text="@string/nomor_hp_bk"
+        android:layout_below="@+id/judul_nomor_hp_BK"
+        android:layout_alignLeft="@+id/pilihtanggaldanhari"
+        android:layout_alignStart="@+id/pilihtanggaldanhari"
+        android:layout_marginTop="12dp" />
 
 
 </RelativeLayout>

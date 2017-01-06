@@ -1,16 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_tab_fragment_profil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/activity_tab_fragment_profil">
 
-    tools:context="com.example.a_citra.belajar.tab_fragment_profil">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/pp"
+            android:layout_alignTop="@+id/nama_pengguna"
+            android:layout_toLeftOf="@+id/nama_pengguna"
+            android:layout_toStartOf="@+id/nama_pengguna"
+            android:layout_marginRight="23dp"
+            android:layout_marginEnd="23dp" />
+
+
+        <TextView
+            android:id="@+id/nama_pengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_pengguna"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/email"
+            android:layout_alignStart="@+id/email" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:layout_below="@+id/nama_pengguna"
+            android:layout_alignLeft="@+id/ubah_kata_sandi"
+            android:layout_alignStart="@+id/ubah_kata_sandi"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:layout_width="100sp"
+            android:layout_height="40sp"
+            android:id="@+id/ubah_kata_sandi"
+            android:background="@color/colorButton"
+            android:text="@string/ubah_kata_sandi"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/email"
+            android:layout_toLeftOf="@+id/ubah_profil"
+            android:layout_toStartOf="@+id/ubah_profil" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:id="@+id/ubah_profil"
+            android:background="@color/colorButton"
+            android:text="@string/ubah_profil"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignTop="@+id/ubah_kata_sandi"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tab Fragment profil"
-        android:textSize="16sp"/>
+        android:id="@+id/isi_nomor_induk"
+        android:text="@string/nomor_induk"
+        android:layout_below="@+id/judul_nomor_induk"
+        android:layout_alignLeft="@+id/judul_nomor_induk"
+        android:layout_alignStart="@+id/judul_nomor_induk" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/judul_nomor_HP"
+        android:text="@string/nomor_hp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/isi_nomor_induk"
+        android:layout_alignLeft="@+id/isi_nomor_induk"
+        android:layout_alignStart="@+id/isi_nomor_induk"
+        android:layout_marginTop="34dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/isi_nomor_HP"
+        android:text="@string/nomor_hp"
+        android:layout_below="@+id/judul_nomor_HP"
+        android:layout_alignLeft="@+id/judul_nomor_HP"
+        android:layout_alignStart="@+id/judul_nomor_HP" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/judul_alamat"
+        android:text="@string/alamat"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/isi_nomor_HP"
+        android:layout_alignLeft="@+id/isi_nomor_HP"
+        android:layout_alignStart="@+id/isi_nomor_HP"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/isi_alamat"
+        android:text="@string/alamat"
+        android:layout_below="@+id/judul_alamat"
+        android:layout_alignLeft="@+id/judul_alamat"
+        android:layout_alignStart="@+id/judul_alamat" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/judul_nomor_induk"
+        android:text="@string/nomor_induk"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/profile_image"
+        android:layout_alignLeft="@+id/profile_image"
+        android:layout_alignStart="@+id/profile_image" />
+
 
 </RelativeLayout>

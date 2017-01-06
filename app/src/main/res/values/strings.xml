@@ -16,5 +16,13 @@
     <string name="pilih_gambar">Pilih Gambar</string>
     <string name="nama_gambar">Nama Gambar</string>
     <string name="pilih_upload_gambar">Pilih</string>
+    <string name="nama_pengguna">Nama Pengguna</string>
+    <string name="email">Email</string>
+    <string name="nomor_induk">Nomor Induk</string>
+    <string name="nomor_hp">Nomor HP</string>
+    <string name="alamat">Alamat</string>
+    <string name="ubah_kata_sandi">Ubah Kata Sandi</string>
+    <string name="ubah_profil">Ubah Profil</string>
+    <string name="nomor_hp_bk">Nomor HP BK</string>
 
 </resources>

@@ -9,17 +9,30 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.kbeanie.multipicker.api.ImagePicker;
+import com.kbeanie.multipicker.api.callbacks.ImagePickerCallback;
+import com.kbeanie.multipicker.api.entity.ChosenImage;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.util.Calendar;
+import java.util.List;
+
+import static android.R.id.message;
 
 
-public class tab_fragment_lapor extends Fragment implements DatePickerDialog.OnDateSetListener {
+public class tab_fragment_lapor extends Fragment implements DatePickerDialog.OnDateSetListener, ImagePickerCallback {
 
     private TextView dateTextView;
 
+    private ListView lvResults;
+    private Button btPickImageSingle;
+    private Button btPickImageMultiple;
+    private Button btTakePicture;
+    private String pickerPath;
 
 
     public tab_fragment_lapor() {
@@ -48,10 +61,26 @@ public class tab_fragment_lapor extends Fragment implements DatePickerDialog.OnD
             }
         });
 
-
+        btPickImageSingle = (Button) rootView.findViewById(R.id.buttonChoose);
+        btPickImageSingle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pickImageSingle();
+            }
+        });
 
         return rootView;
     }
+
+    private ImagePicker imagePicker;
+    private void pickImageSingle() {
+        imagePicker = new ImagePicker(this);
+        imagePicker.shouldGenerateMetadata(true);
+        imagePicker.shouldGenerateThumbnails(true);
+        imagePicker.setImagePickerCallback(this);
+        imagePicker.pickImage();
+    }
+
 
     @Override
     public void onResume() {
@@ -67,4 +96,13 @@ public class tab_fragment_lapor extends Fragment implements DatePickerDialog.OnD
     }
 
 
+    @Override
+    public void onImagesChosen(List<ChosenImage> list) {
+
+    }
+
+    @Override
+    public void onError(String s) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+    }
 }
