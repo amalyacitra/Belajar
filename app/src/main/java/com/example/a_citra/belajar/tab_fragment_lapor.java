@@ -103,6 +103,6 @@ public class tab_fragment_lapor extends Fragment implements DatePickerDialog.OnD
 
     @Override
     public void onError(String s) {
-        Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+
     }
 }
