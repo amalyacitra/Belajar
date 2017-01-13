@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(@IdRes int tabId) {
                 if(tabId==R.id.tab_buat_janji){
                     Fragment fBuatJanji = new tab_fragment_buat_janji();
-
                     getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fBuatJanji).commit();
 
                 }

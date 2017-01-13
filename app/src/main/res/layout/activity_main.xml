@@ -8,6 +8,7 @@
 
     tools:context="com.example.a_citra.belajar.MainActivity">
 
+
     <include
         android:id="@+id/appbar"
         layout="@layout/app_bar"
@@ -24,11 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomBar"
-        android:layout_below="@+id/appbar"
-        >
+        android:layout_below="@+id/appbar">
 
     </FrameLayout>
-
 
 
     <com.roughike.bottombar.BottomBar
@@ -44,7 +43,6 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-
 
 
 </RelativeLayout>

@@ -24,5 +24,13 @@
     <string name="ubah_kata_sandi">Ubah Kata Sandi</string>
     <string name="ubah_profil">Ubah Profil</string>
     <string name="nomor_hp_bk">Nomor HP BK</string>
+    <string name="kata_sandi_baru">Kata Sandi Baru</string>
+    <string name="ulang_kata_sandi_baru">Ulang Kata Sandi Baru</string>
+    <string name="simpan">Simpan</string>
+    <string name="ubah_gambar">Ubah Gambar</string>
+    <string name="ubah_nama">Ubah Nama</string>
+    <string name="ubah_email">Ubah Email</string>
+    <string name="ubah_nomor_hp">Ubah Nomor HP</string>
+    <string name="ubah_alamat">Ubah Alamat</string>
 
 </resources>

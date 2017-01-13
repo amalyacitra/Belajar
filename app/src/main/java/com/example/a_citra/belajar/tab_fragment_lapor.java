@@ -28,12 +28,7 @@ public class tab_fragment_lapor extends Fragment implements DatePickerDialog.OnD
 
     private TextView dateTextView;
 
-    private ListView lvResults;
     private Button btPickImageSingle;
-    private Button btPickImageMultiple;
-    private Button btTakePicture;
-    private String pickerPath;
-
 
     public tab_fragment_lapor() {
 
